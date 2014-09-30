@@ -1,0 +1,13 @@
+{
+  "name": "shower-term",
+  "description": "Shower HTML presentation engine with a real terminal",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.9.5",
+    "pty.js": "^0.2.4",
+    "shower-core": "^1.0.7",
+    "shower-ribbon": "^1.0.11",
+    "socket.io": "^1.1.0",
+    "term.js": "0.0.4"
+  }
+}
