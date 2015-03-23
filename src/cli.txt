@@ -1,0 +1,13 @@
+# first, create a Titanium Classic project
+$ titanium create --name yourAppName
+$ cd yourAppName
+
+# then, convert it to an Alloy project, using the test app as a template
+$ alloy new . --testapp basics/simple
+
+
+$ ti build
+
+
+$ alloy generate controller schedule
+$ alloy generate controller speakers

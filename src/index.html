@@ -1,186 +1,455 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="fr">
 <head>
-    <title>Shower Presentation Engine</title>
+    <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="../node_modules/shower-ribbon/styles/screen.css">
+    <link rel="stylesheet" href="css/vendor/screen.css">
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="list">
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Titanium : créer une application mobile cross-platforms performante avec du Javascript</h1>
+        <p>Blend Web Mix - Benjamin Clay - Octobre 2014</p>
     </header>
-    <section class="slide cover" id="Cover"><div>
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-        <img src="pictures/cover.jpg" alt="">
-        <!--
-            To apply styles to the certain slides
-            set slide ID to get needed elements
-            -->
-        <style>
-            #Cover h2 {
-                margin:30px 0 0;
-                color:#FFF;
-                text-align:center;
-                font-size:70px;
-                }
-            #Cover p {
-                margin:10px 0 0;
-                text-align:center;
-                color:#FFF;
-                font-style:italic;
-                font-size:20px;
-                }
-                #Cover p a {
-                    color:#FFF;
-                    }
-        </style>
+
+    <section class="slide cover coverpage" id="coverpage"><div>
+        <img src="covers/intro.jpg" />
+        <div class="covertitle">
+            <h2>Titanium : créer une application mobile cross-platforms performante avec du Javascript</h2>
+            <p>Blend Web Mix - Benjamin Clay - <span class="date">Octobre 2014</span></p>
+        </div>
     </div></section>
-    <section class="slide"><div>
-        <h2>Shower Key Features</h2>
-        <ol>
-            <li>Built on HTML, CSS and vanilla JavaScript</li>
-            <li>All modern browsers are supported</li>
-            <li>Slide themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+
+    <section class="slide cover coverpage" id="coverpage-2"><div>
+        <img src="covers/intro-2.jpg" />
+        <div class="covertitle">
+            <h2>Titanium : créer une application mobile cross-platforms performante avec du Javascript</h2>
+            <p>Blend Web Mix - Benjamin Clay - <span class="date">Octobre 2014</span></p>
+        </div>
     </div></section>
+
     <section class="slide"><div>
-        <h2>Plain Text on Your Slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Nombreux OS mobiles ...</h2>
+        <img src="pictures/kantar-smartphones-france.png" />
+        <p class="footnote">http://www.eco-conscient.com/art-1092-france-quelle-part-de-marche-pour-android-et-iphone-en-fevrier-2011.html</p>
     </div></section>
+
     <section class="slide"><div>
-        <h2>All Kind of Lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
+        <h2>... différents langages ...</h2>
+        <ul>
+            <li>Objective-C / Swift</li>
+            <li>Java</li>
+            <li>C#</li>
+            <li>...</li>
+        </ul>
+        <h2>... et différents SDKs !</h2>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Appcelerator Titanium</h2>
+
+        <div style="float: left; width: 60%;">
+            <ul>
+                <li>Couche d'abstraction</li>
+                <li>Open-Source - Licence Apache2</li>
+                <li>Gratuit</li>
+                <li>Société sponsor : Appcelerator</li>
+                <li>Soutenu par eBay</li>
+                <li>Première version en 2009 <span class="next">avec beaucoup de bugs !</span></li>
+            </ul>
+        </div>
+        <div style="float: right; width: 40%;">
+            <img src="pictures/appcelerator.png" style="height: 8em;" />
+        </div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Appcelerator Titanium</h2>
+        <ul>
+            <li>270 000 000 devices ont au moins une application Titanium</li>
+            <li>eBay, PayPal, Cisco, VMWare, Avis, ...</li>
+        </ul>
+        <div class="next">
+            <img src="pictures/logo-lego.png" style="height:3em; vertical-align: top;" />
+            <img src="pictures/lego-awesome.gif" />
+        </div>
+
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Comment ça marche, Jamy ?</h2>
+        <ul>
+            <li>Accès aux fonctionnalités matérielles par le biais d'APIs Javascript</li>
+            <li>Mapping API Javascript <-> APIs natives</li>
+            <li class="next">ie. développement 100% Javascript</li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Comment ça marche, Jamy ?</h2>
+        <ul>
+            <li>Accès aux fonctionnalités matérielles par le biais d'<strong>APIs Javascript</strong></li>
+            <li>Mapping API <strong>Javascript</strong> <-> APIs natives</li>
+            <li>ie. développement <strong>100% Javascript</strong></li>
+        </ul>
+        <p style="font-size: 10em; line-height: 1em; margin-top: -0.3em;">ಠ_ಠ</p>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Coucou, je suis Benjamin Clay</h2>
+            <ul style="margin-bottom: 25px">
+                <li>Expert Web et mobile et éleveur de licornes @ <img src="pictures/logo.svg" style="height:1.5em; vertical-align: text-bottom;">.</li>
+                <li>PHP/Symfony2/elasticsearch</li>
+                <li>Javascript/Alloy/NodeJS</li>
+                <li>Contributeur Open-Source && créateur d'un site à fort trafic</li>
+            </ul>
+        <div style="float: left; width: 85%;">
+            <p><img src="pictures/twitter.png" style="width: 20px"> <a href="https://twitter.com/ternel">@ternel</a></p>
+        </div>
+        <div style="float: right; width: 15%;">
+            <img src="pictures/avatar.jpg" />
+        <div>
+    </div></section>
+
+    <section class="slide cover"><div>
+        <img src="covers/jolicode-bg.jpg" alt="" style="margin-top: 1em;" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Alloy... ou TiAlloy</h2>
+        <img src="pictures/alloy.png" width="30%" alt="" class="middle" /><span class="biggest">&nbsp;==&nbsp;</span><img src="pictures/urkel.jpg" width="40%" alt="" class="middle" style="margin-bottom: 5px" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>TiAlloy, c'est...</h2>
+        <ul>
+            <li>Framework MVC</li>
+            <li>Source Code Transformer</li>
+            <li>Code Alloy --> Code Titanium</li>
+            <li class="next">Alloy ne remplace pas Titanium, il le complète.</li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>TiAlloy</h2>
+        <ul>
+            <li>Open Source</li>
+            <li>Depuis 2012</li>
+            <li>Utilise de composants existants</li>
+            <li>S'appuie sur NodeJS, disponible via npm</li>
+            <li>Documentation plutôt bonne</li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <img src="pictures/alloy-mvc.png" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>CLI ou IDE, à vous de choisir</h2>
+        <ul>
+            <li>CLI pour Titanium / Alloy</li>
+            <img src="pictures/gui-vs-cli.jpg" alt="" style="width: 100%" />
+            <p class="half center">GUI</p>
+            <p class="half center">CLI</p>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Commençons notre application</h2>
+        <ul>
+            <li>$ ti create</li>
+            <li>$ alloy new .</li>
+            <li>$ ti build -p ios</li>
+            <li>$ ti build -p android</li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Oh... wait ! Rappel important !</h2>
+        <div class="next">
+            <div style="float: left; width: 35%;">
+                <img src="pictures/bonaldi.jpg" />
+            </div>
+            <div style="float: right; width: 65%;">
                 <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
+                <li>Qui dit Live Coding, dit effet Bonaldi !</li>
+                <li>« Toute démonstration d’un produit quelconque qui fonctionnait parfaitement aux répétitions foirera lamentablement lors de la démonstration publique. »</li>
                 </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
+            </div>
+        </div>
     </div></section>
+
     <section class="slide"><div>
-        <h2>Serious Citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
+        <h2>Commençons notre application</h2>
+        <ul>
+            <li>$ ti create</li>
+            <li>$ alloy new .</li>
+            <li>$ ti build -p ios</li>
+            <li>$ ti build -p android</li>
+        </ul>
     </div></section>
+
     <section class="slide"><div>
-        <h2>Code Samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code>&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
+        <h2>Commençons notre application</h2>
+        <div class="term"></div>
     </div></section>
+
     <section class="slide"><div>
-        <h2>Even Tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
+        <h2>Voici notre première application !</h2>
+        <ul>
+            <li>Fonctionne sur iOS et Android</li>
+            <li>Les alertes sont bien des éléments de l'OS</li>
+        </ul>
     </div></section>
-    <section class="slide cover" id="Picture"><div>
-        <h2>Pictures</h2>
-        <img src="pictures/picture.jpg" alt="">
-        <style>
-            #Picture h2 {
-                color:#FFF;
-                }
-        </style>
-    </div></section>
-    <section class="slide shout"><div>
-        <h2>You can even shout this way</h2>
-    </div></section>
+
     <section class="slide"><div>
-        <h2>Inner Navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+        <h2>#1 app iOS / Android</h2>
+        <img src="pictures/1-init-ios.png" style="width: 45%;" />
+        <img src="pictures/1-init-android.png" style="width: 45%;" />
     </div></section>
-    <section class="slide shout" id="SeeMore"><div>
-        <h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
-        <style>
-            #Picture h2 {
-                color:#FFF;
-                }
-            #SeeMore h2 {
-                font-size:100px
-                }
-            #SeeMore img {
-                width:0.72em;
-                height:0.72em;
-                }
-        </style>
+
+    <section class="slide"><div>
+        <h3>index.js : le contrôleur</h3>
+    <pre><code class="language-javascript">function doClick(e) {
+    alert($.label.text);
+}
+
+$.index.open();
+</code></pre>
+        <h3>index.xml : la vue</h3>
+    <pre><code class="language-javascript">&lt;Alloy&gt;
+    &lt;Window class="container"&gt;
+        &lt;Label id="label" onClick="doClick"&gt;Hello, World&lt;/Label&gt;
+    &lt;/Window&gt;
+&lt;/Alloy&gt;
+</code></pre>
     </div></section>
-    <p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
-    <!--
-        To hide progress bar from entire presentation
-        just remove “progress” element.
+
+
+    <section class="slide"><div>
+        <h3>index.tss : le style</h3>
+    <pre><code class="language-css">".container": {
+    backgroundColor:"white"
+}
+
+"Label": {
+    width: Ti.UI.SIZE,
+    height: Ti.UI.SIZE,
+    color: "#000"
+}
+
+"#label": {
+    font: {
+        fontSize: 12
+    }
+}
+</code></pre>
+    </div></section>
+
+    <section class="slide"><div>
+        <img src="pictures/how-1.png" />
+    </div></section>
+
+    <section class="slide"><div>
+        <img src="pictures/how-2.png" />
+    </div></section>
+
+    <section class="slide"><div>
+        <img src="pictures/how-3.png" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Apportons quelques modifications</h2>
+        <div class="term"></div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>#1.5 app iOS / Android</h2>
+        <img src="pictures/2-style-ios.png" style="width: 45%;" />
+        <img src="pictures/2-style-android.png" style="width: 45%;" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Améliorons notre application</h2>
+        <ul>
+            <li>Ajoutons des pages : $ alloy generate controller [nom du contrôleur]</li>
+            <li>Ajoutons un TabGroup</li>
+            <li>Ajoutons une liste de speakers</li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Créons les pages</h2>
+        <div class="term"></div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Ajoutons un TabGroup</h2>
+        <div class="term"></div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>TabGroup iOS / Android</h2>
+        <img src="pictures/3-tabgroup-ios.png" style="width: 45%;" />
+        <img src="pictures/3-tabgroup-android.png" style="width: 45%;" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Ajoutons la liste des speakers</h2>
+        <div class="term"></div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>TabGroup iOS / Android</h2>
+        <img src="pictures/4-listview-ios.png" style="width: 45%;" />
+        <img src="pictures/4-listview-android.png" style="width: 45%;" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Momentjs (ou toutes autres libs externes)</h2>
+        <div class="term"></div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Passons à la page photo</h2>
+        <div class="term"></div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Photo iOS / Android</h2>
+        <img src="pictures/5-photo-ios.png" style="width: 45%;" />
+        <img src="pictures/5-photo-android.png" style="width: 45%;" />
+    </div></section>
+
+    <section class="slide cover"><div>
+        <h2>Extensibilité</h2>
+        <img src="covers/extend.jpg" alt="" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Titanium Module && Alloy Widgets !</h2>
+        <img src="pictures/gittio.png" alt="" style="width: 80%;" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Titanium Module && Alloy Widgets !</h2>
+        <ul>
+            <li>gittio install</li>
+            <li>$ gittio install com.jolicode.pageflow</li>
+        </ul>
+    </div></section>
+
+    <section class="slide cover"><div>
+        <h2>Outils</h2>
+        <img src="covers/tools.jpg" alt="" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Pré-processeurs</h2>
+        <img src="pictures/sass-logo.png" alt="" class="half center" style="width: 40%;" />
+        <img src="pictures/less-logo.png" alt="" class="half center" style="margin-left: 15%; width: 40%;" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Pré-processeurs</h2>
+        <img src="pictures/coffeescript-logo.png" alt="" class="place" style="float: left; height: 15em;" />
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Automatisation</h2>
+        <div style="float: left; width: 50%;">
+            <img src="pictures/grunt-logo.png" alt="" style="height: 13em;" />
+        </div>
+        <div style="float: right; width: 50%;">
+            <ul>
+                <li>Watch des fichiers</li>
+                <li>Recompilation</li>
+            </ul>
+        </div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>TiShadow</h2>
+        <div style="float: left; width: 50%;">
+            <img src="pictures/tishadow.png" alt="" style="height: 13em;" />
+        </div>
+        <div style="float: right; width: 50%;">
+            <ul>
+                <li>Serveur TiShadow</li>
+                <li>n clients TiShadow</li>
+                <li>Ré-execute le code JS sur les n clients</li>
+                <li>Grunt !</li>
+            </ul>
+        </div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>ACS</h2>
+        <div style="float: left; width: 50%;">
+            <img src="pictures/acs.png" alt="" style="height: 13em;" />
+        </div>
+        <div style="float: right; width: 50%;">
+            <ul>
+                <li>Analytics</li>
+                <li>Notifications</li>
+                <li>DB</li>
+                <li>Users</li>
+            </ul>
+        </div>
+    </div></section>
+
+    <section class="slide cover"><div>
+        <h2>Vers l'infini et au-delà !</h2>
+        <img src="covers/buzz.jpg" alt="" />
+    </div></section>
+
+
+    <section class="slide"><div>
+        <h2>Hyperloop</h2>
+        <ul>
+            <li>Compile du JS en code natif</li>
+            <li>Très prometteur</li>
+            <li>Titanium 4</li>
+            <li>Avec support de WindowsPhone</li>
+        </ul>
+    </div></section>
+
+    <section class="slide cover" id="end"><div>
+        <img src="pictures/jolibeer.jpg" />
+        <h2>
+            Merci !<br />
+            :)
+        </h2>
+        <!--
+        <p style="color: black; font-weight: bold;">Viendez à l'apéro ce soir, on sera les 2 mecs bourrés, et on pourra parler de HHVM, de Hackkk, de Whiky et de tucs qi sn coo lll l!</p>
         -->
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Merci !</h2>
+        <p>https://github.com/ternel/tialloy-intro-talk-source</p>
+        <pre><code class="language-javascript">Ti.App.fireEvent('questions');</code></pre>
+    </div></section>
+
+
     <div class="progress"><div></div></div>
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="term.js"></script>
+
+    <script src="../js/vendor/jquery.min.js"></script>
+    <script src="../js/vendor/term.js"></script>
     <script src="js/terminal.js"></script>
     <script>
     $(function() {
         $('.term').terminal();
     });
     </script>
-
-    <script src="../node_modules/shower-core/shower.min.js"></script>
+    <script src="js/shower.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="../js/main.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <!-- Copyright © 2014 Yours Truly, Famous Inc. -->
-    <!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
 </html>
